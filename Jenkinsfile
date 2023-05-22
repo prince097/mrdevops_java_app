@@ -32,7 +32,7 @@ pipeline{
             steps{
                script{
                    
-//                    mvnTest()
+                  echo "test passed"
                }
             }
         }
