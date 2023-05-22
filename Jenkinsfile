@@ -1,4 +1,5 @@
-@Library('my-shared-library') _
+@Library('my-shared-library') _ 
+// importing jenkins library above
 
 pipeline{
 
@@ -17,7 +18,8 @@ pipeline{
         stage('Git Checkout'){
                     when { expression {  params.action == 'create' } }
             steps{
-            gitCheckout(
+//                 function name git Checkout, and varaiables branch and url , from file gitcheckout.groovy from shared library
+            gitCheckout( 
                 branch: "main",
                 url: "https://github.com/prince097/mrdevops_java_app.git"
             )
